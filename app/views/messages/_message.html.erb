@@ -1,0 +1,18 @@
+<div class="event">
+  <div class="content">
+    <div class="summary">
+      <% if message.user.username != current_user.username %>
+	      <a class="ui label" data-inverted="" data-tooltip="<%= message.user.username %>" data-position="right center">
+				  <em><%= message.user.username[0] %></em> 
+				</a>
+				<a class="ui orange label">
+			  	<%= message.body %>
+				</a>
+			<% else %>
+				<a class="ui orange label right floated">
+			  	<%= message.body %>
+				</a>
+      <% end %>
+    </div>
+  </div>
+</div>
